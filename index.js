@@ -6,6 +6,7 @@ getNotes().forEach((note) => {
   appEl.insertBefore(noteEl, btnEl);
 });
 
+// noteObj.id, noteObj.content 를 id, content의 인자로 받음 
 function createNoteEl(id, content) {
   const element = document.createElement("textarea");
   element.classList.add("note");
@@ -32,16 +33,19 @@ function deleteNote(id, element) {
   appEl.removeChild(element);
 }
 
+// id, element.value를 인자로 받음 
 function updateNote(id, content) {
   const notes = getNotes()
   const target = notes.filter((note) => note.id == id)[0];
   target.content = content;
+  console.log(target);
   saveNote(notes);
 }
 
 function addNote() {
+  // key : note-app의 value : notes
   const notes = getNotes();
-
+  // console.log(notes);
   const noteObj = {
     id : Math.floor(Math.random() * 100000),
     content: ""
@@ -59,6 +63,7 @@ function saveNote(notes) {
 }
 
 function getNotes() {
+  // localstorage에 key: note-app, value: data가 있으면 불러오고 없으면 [] 빈 배열을 할당
   return JSON.parse(localStorage.getItem("note-app") || "[]");
 }
 
