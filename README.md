@@ -230,7 +230,7 @@ https://ko.javascript.info/alert-prompt-confirm
 https://velog.io/@haleyjun/JavaScript-filter-%EC%82%AC%EC%9A%A9%EB%B2%95  
 https://www.w3schools.com/jsref/jsref_filter.asp  
 https://velog.io/@bgo517/LocalStorage   
-
+https://www.daleseo.com/js-web-storage/  
 
 **키워드**
 - box-sizing  
